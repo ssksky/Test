@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        article{
+            width: 230px;
+            height: 330px;
+            background: #343434;
+            margin: 50px auto;
+        }
+
+        .circle{
+            height: 230px;
+            padding: 35px;
+            animation-name:out;
+            animation-duration: 4.5s;
+            animation-iteration-count: linear;
+        }
+        .text{
+            color: #fff;
+            text-align: center;
+            height: 100px;
+        }
+
+        #out{
+            height: 100%;
+            border: 5px solid #9a9a9a;
+            border-radius: 50%;
+            padding:10px;
+             animation-name:inner;
+            animation-duration: 4.5s;
+        }
+
+        #inner{
+            height: 100%;
+            border:10px solid #fff;
+             border-radius: 50%;
+        }
+
+        @keyframes out{
+            20%{
+                padding: 25px;
+            }
+            40%{
+                padding: 35px;
+            }
+            100%{
+                padding: 35px;
+            }
+        }
+        @keyframes inner{
+             20%{
+                padding: 20px;
+            }
+            40%{
+                padding: 10px;
+            }
+           65%{
+               padding: 22px;
+           }
+            100%{
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <div class="circle">
+            <div id="out">
+                <div id="inner">
+
+                </div>
+            </div>
+        </div>
+        <div class="text">
+            这是呼吸灯
+        </div>
+    </article>
+</body>
+</html>
