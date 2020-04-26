@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        span{
+            display: inline-block;
+            width: 70px;
+        }
+    </style>
+</head>
+
+<body style="width:1000px;">
+    <script>
+         var i=0;
+         do{
+             i++;
+             var k=0;
+             do{
+                 k++
+                var sp;
+                sp="<span>"+i+"*"+k+"="+(i*k)+"</span>"
+                document.write(sp);
+             }while(k<i)
+             document.write("<br>");
+         }while(i<9)
+         document.write("<hr>");
+
+
+          var i=10;
+         do{
+             i--;
+             var k=0;
+             do{
+                 k++
+                var sp;
+                sp="<span>"+i+"*"+k+"="+(i*k)+"</span>"
+                document.write(sp);
+             }while(k<i)
+             document.write("<br>");
+         }while(i>1)
+         document.write("<hr>");
+
+
+
+         var i=10;
+         do{
+             i--;
+             var k=0;
+             do{
+                 k++
+                 var sp;
+                 if(i<=k)
+                 {
+                    sp="<span>"+i+"*"+k+"="+(i*k)+"</span>"
+                 }else{
+                    sp="<span>"+"</span>"
+                 }
+
+                 document.write(sp);
+             }while(k<9)
+             document.write("<br>");
+         }while(i>1)
+         document.write("<hr>");
+
+
+          var i=0;
+         do{
+             i++;
+             var k=0;
+             do{
+                 k++
+                 var sp;
+                 if(i<=k)
+                 {
+                    sp="<span>"+i+"*"+k+"="+(i*k)+"</span>"
+                 }else{
+                    sp="<span>"+"</span>"
+                 }
+
+                 document.write(sp);
+             }while(k<9)
+             document.write("<br>");
+         }while(i<9)
+         document.write("<hr>");
+
+
+
+
+
+
+
+
+    </script>
+<body>
+    
+</body>
+</html>
