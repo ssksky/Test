@@ -1,0 +1,176 @@
+引用数据类型：
+	复杂数据类型
+
+	1.基础类型
+		核心js中，对象就是一组数据和功能的集合（静态属性和动态属性的集合）
+
+		1.创建object实例
+		       1》使用构造函数创建
+		           	Object()
+			function Object(){
+				......
+				constructor(){}
+				tostring(){}
+				valueof(){}
+				......
+			}
+			
+			var  o=new Object() //空对象
+			console.log(o);
+		       2》 使用对象字面量
+			var o1={};  //创建一个空对象
+		
+		2.添加属性
+		      1>点操作符
+			o.name='lisi';
+		       2>只能针对字面量形式添加属性
+			var o{
+			        属性名:属性值,
+				用 ,  隔开
+				最后一个不加 ,
+			}
+		       3> 访问对象属性
+			1> 点操作符
+			       o.name
+			       o.age
+			2> 中括号
+			       在中括号中必须是一个计算结果为字符串的表达式,可以通过变量访问属性;
+			       如果属性名中包含语法错误的字符;或者属性名使用了关键字保留字,可以使用中括号
+			       ["name"]
+			o={
+				name age:13;
+				alert:30
+			}
+			  console.log(o.name age); //报错
+			  console.log(o["name age"]); //成功
+		  4> 删除属性
+			delete只是断开了属性和属性值之间的链接
+			delete o1.name	
+			delete删除属性时,对于继承属性
+		 5>检测属性
+			in关键字
+			检测某个属性是否是对象的自有属性关键字或者继承属性
+			语法:
+				"name" in  o
+			hasOwnProperty():方法
+			检测给定的属性是否是某个对象的自由属性?对于继承属性和不存在的属性返回false
+			语法:
+				o.hasOwnProperty("name")
+		6>对象序列化
+			toString()==>[Object Object]
+
+			对象序列化是指将对象的状态转换为字符串,可以反序列化,将字符串还原为对象
+			
+			var str="{
+				name:'lisi'
+			}";
+				===>obj
+			JSON对象:
+				JSON.stringfy(o):将对象序列化为json字符串
+				JSON.parse(jsonstr):将字符串反序列化为对象	new Object()	
+				反序列化得到的一个对象不是原始对象
+
+
+	2.函数
+	       Object
+	        函数也属于引用数据类型中的一种,函数其实就是object中的一种子类型,实际上就是对象
+	       1>创建函数
+		1.函数声明
+			function   handler(形参:形式参数){
+				console.log(10);
+			}
+		2.函数表达式
+			var a=10;
+			
+			var run=function(){
+				函数体
+			}
+			
+			run();
+
+			匿名函数:
+				var run=function(){
+					alert(10);
+				}
+
+				立即执行
+				   (function(){
+					alert(10);
+               					alert(20);
+				  })()
+			区别:
+       			     解析顺序:
+			         	解析器在加载数据时,会率先读取函数声明
+			         	第二步解析所有的表达式
+			        	按顺序执行js代码
+	       2>函数调用
+		函数名();
+
+		在js中,没有重载概念;只要函数名相同,那么两个函数即为同一个函数;不介意传递参数的个数,形参个数以及参数模型
+			
+		function handler(形参列表){
+
+		}
+		handler(实参列表);
+
+		-----------
+
+		function handler(name,age,gender,a,b){
+		
+		}
+
+		handler("lisi",20);
+
+	3> 作为值的函数
+		由于函数名本身就是一个变量,索引函数可以当作值来使用
+
+		function handler(a,fun){
+			fun()
+		}
+
+		function sum(){
+			alert("hello");
+		}
+		
+		hanlder(1,sum)
+
+	4>组为返回值的函数
+		return
+		var result = function handler(){
+			...
+			return function(){}
+		}
+
+
+	5>函数的内部属性
+		function handler(){
+			console.log(arguments);
+		}
+		1.arguments:类数组对象
+			length:实参个数
+			callee:指向当前函数
+
+		function handler(a,b){ //1.var a; var b;
+			//3.a=arguments[0];
+			      b=arguments[0];
+
+			//4.执行
+			      console.log()
+			
+		}
+
+		handler(1,2,3);
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

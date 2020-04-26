@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        
+			var  o=new Object(); //空对象
+            o.name='lisi';
+            o.age=23;
+            console.log(o);
+            console.log(o.age);
+            o.toString=function(){
+                return 20;
+            }
+            console.log(o.toString());
+            delete o.age;
+            delete o.toString;        
+            console.log(o.toString());
+            console.log(o.age);
+            console.log(o);
+
+
+            var o1={
+                name:'kai',
+                age:22,
+                gender:'man',
+            };
+            // o1.name='terry';
+            // o1.age=30;
+            // console.log(o1);
+            // console.log(o1.age);
+
+            // for(var key in o1){
+            //     console.log(key);
+            //     console.log(o1.key);   
+            // }
+            
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

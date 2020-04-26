@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组排序</title>
+    <script type="text/javascript">
+
+        var arr=[8,19,3,12,5,4];
+        console.log(arr);
+
+        var result=arr.sort(function(a,b){
+            if(a>b){
+                return 1
+            }else{
+                return -1
+            }
+        })
+        console.log(result);
+
+     
+        var arr = [8,19,3,12,5,4];
+        for(var i in arr){
+            for(var k in arr){
+                if(arr[i]<arr[k]){
+                    times = arr[i];
+                    arr[i] = arr[k];
+                    arr[k] = times;
+                }
+            }
+        }
+        console.log(arr);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

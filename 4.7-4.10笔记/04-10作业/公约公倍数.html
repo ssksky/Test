@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公约数公倍数</title>
+    <script type="text/javascript">
+
+        function handler(a,b){
+        var result = 1;
+            for(var i = 1; i <= a && i <= b; i++ ){
+                if(a%i == 0 && b%i == 0 ){
+                result = i;
+                }
+            }
+        return result;
+        }
+
+        var a=5;
+        var b=6;
+        var gongyueshu=handler(a,b);
+        document.write("最大公约数"+gongyueshu);
+        document.write('<br>');
+
+        var gongbeishu=a*b / gongyueshu;
+        document.write("最小公倍数"+gongbeishu);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+ 	6。函数的内部属性
+		1.arguments
+		       类数组对象，每一个函数都有一个arguments对象；
+		             length：返回拥有当前arguments函数的实参个数
+		                arguments.length
+		             callee:从函数内部指向拥有当前arguments的函数
+		2.this
+		     指向当前函数赖以执行的环境对象
+		     当前函数 谁调用指向谁
+		      this值当拥有this的函数被调用时才能确定
+		      function handler（）{
+			console.log(this);
+		      }
+	
+
+	7.函数的属性
+		通过  函数名.属性名  调用一下属性
+		length：函数所希望接受的参数的个数（形参）
+		var    o={
+			name：‘lisi’，
+			age：12
+		}
+
+		o.name	
+		o.age
+
+		function(){
+			
+		}
+		var handler=function(){}
+
+		handler.length:返回当前函数的形参位置
+		prototype:保存实例方法的真正位置
+			函数哎内存中有两块内存空间（夫妻关系）
+		object（）---》》prototype：原型对象
+		prototype：原型对象
+
+	8.函数的方法
+	
+		apply():
+		        参数:当前函数运行的作用域this,[参数列表]
+		call()
+		        参数:当前函数运行的作用域
+
+
+
+--------------------------
+
+                    基本数据类型传递
+

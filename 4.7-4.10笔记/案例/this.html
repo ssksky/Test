@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        
+     
+        var length=10;
+      
+    
+        function handler(){
+            length=20;
+            alert(this.length);
+        }
+        
+        var obj={
+            length:30,
+            handler:handler,
+            say:function(fun){
+                fun();
+            }
+        }
+
+        // handler();
+        // obj.handler();
+        obj.say(handler);
+
+     </script>
+</head>
+<body>
+    
+</body>
+</html>

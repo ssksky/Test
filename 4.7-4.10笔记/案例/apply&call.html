@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        
+        var age=20;
+        function handler(){
+            alert(this.age);
+        }
+
+        var obj={
+            age:40
+        }
+        obj.handler=handler;
+
+        // handler();
+        // obj.handler();
+
+        // obj.handler.apply(window,[12,34,45]);
+
+        handler.call(obj,23,21,11)
+     </script>
+</head>
+<body>
+    
+</body>
+</html>

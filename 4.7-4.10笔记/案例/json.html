@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">        
+        var o={
+            name:'lisi',
+            age:20,
+            gender:'men'
+        }
+
+        //1.将对象转化为字符串类型
+        var str=JSON.stringify(o);
+        console.log("o:",o);
+        console.log("jsonstr:",str);
+
+        //2.将字符串中转换为对象
+        var obj=JSON.parse(str);
+        obj.address='江苏省';
+        console.log("obj:",obj);
+
+        console.log(o==obj);
+
+     
+     </script>
+
+</head>
+<body>
+    
+</body>
+</html>
